@@ -1,0 +1,184 @@
+[
+  {
+    "application": "ChatGPT",
+    "asset": "openai.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Claude Code",
+    "asset": "claudecode-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Gemini",
+    "asset": "gemini-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Grok",
+    "asset": "grok.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Hugging Face",
+    "asset": "huggingface-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Cursor",
+    "asset": "cursor.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Lovable",
+    "asset": "lovable-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "VS Code",
+    "asset": "vscode.webp",
+    "source": "User attachment: Без_названия-removebg-preview.png",
+    "optimization": "Lossless WebP, original 148 × 148 RGBA pixels preserved"
+  },
+  {
+    "application": "GitHub",
+    "asset": "github.svg",
+    "source": "https://github.com/logos"
+  },
+  {
+    "application": "Python",
+    "asset": "python.svg",
+    "source": "https://www.python.org/community/logos/"
+  },
+  {
+    "application": "Node.js",
+    "asset": "nodedotjs.svg",
+    "source": "https://nodejs.org/en/about/branding"
+  },
+  {
+    "application": "Django",
+    "asset": "django.svg",
+    "source": "https://www.djangoproject.com/community/logos/"
+  },
+  {
+    "application": "Docker",
+    "asset": "docker.svg",
+    "source": "https://www.docker.com/company/newsroom/media-resources"
+  },
+  {
+    "application": "LangGraph",
+    "asset": "langgraph-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Supabase",
+    "asset": "supabase.svg",
+    "source": "https://github.com/supabase/supabase/blob/4031a7549f5d46da7bc79c01d56be4177dc7c114/packages/common/assets/images/supabase-logo-wordmark--light.svg"
+  },
+  {
+    "application": "Vercel",
+    "asset": "vercel.svg",
+    "source": "https://vercel.com/geist/brands"
+  },
+  {
+    "application": "Google Sheets",
+    "asset": "googlesheets.svg",
+    "source": "https://sheets.google.com"
+  },
+  {
+    "application": "Google Forms",
+    "asset": "googleforms.svg",
+    "source": "https://about.google/products/#all-products"
+  },
+  {
+    "application": "Blender",
+    "asset": "blender.svg",
+    "source": "https://www.blender.org/about/logo"
+  },
+  {
+    "application": "ComfyUI",
+    "asset": "comfyui-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Remotion",
+    "asset": "remotion.svg",
+    "source": "https://github.com/remotion-dev/brand/blob/main/logo.svg"
+  },
+  {
+    "application": "FFmpeg",
+    "asset": "ffmpeg.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:FFmpeg_Logo_new.svg"
+  },
+  {
+    "application": "VEGAS Pro",
+    "asset": "vegas.svg",
+    "source": "https://www.vegascreativesoftware.com"
+  },
+  {
+    "application": "Google Veo",
+    "asset": "google-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Kling",
+    "asset": "kling-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "HeyGen",
+    "asset": "heygen.svg",
+    "source": "https://www.heygen.com/brand-kit"
+  },
+  {
+    "application": "Adobe",
+    "asset": "adobe-color.svg",
+    "source": "https://github.com/lobehub/lobe-icons"
+  },
+  {
+    "application": "Access",
+    "asset": "microsoftaccess.svg",
+    "source": "https://github.com/homarr-labs/dashboard-icons/blob/main/svg/microsoft-access.svg"
+  },
+  {
+    "application": "Word",
+    "asset": "microsoftword.svg",
+    "source": "https://github.com/homarr-labs/dashboard-icons/blob/main/svg/microsoft-word.svg"
+  },
+  {
+    "application": "Excel",
+    "asset": "microsoftexcel.svg",
+    "source": "https://github.com/homarr-labs/dashboard-icons/blob/main/svg/microsoft-excel.svg"
+  },
+  {
+    "application": "PowerPoint",
+    "asset": "microsoftpowerpoint.svg",
+    "source": "https://github.com/homarr-labs/dashboard-icons/blob/main/svg/microsoft-powerpoint.svg"
+  },
+  {
+    "application": "Outlook",
+    "asset": "microsoftoutlook.svg",
+    "source": "https://github.com/homarr-labs/dashboard-icons/blob/main/svg/microsoft-outlook.svg"
+  },
+  {
+    "application": "Битрикс24",
+    "asset": "bitrix24.ico",
+    "source": "https://www.bitrix24.ru/favicon.ico"
+  },
+  {
+    "application": "1С",
+    "asset": "1c.ico",
+    "source": "https://1c.ru/favicon.ico"
+  },
+  {
+    "application": "Axapta",
+    "asset": "microsoft.svg",
+    "source": "https://github.com/edent/SuperTinyIcons",
+    "note": "Microsoft vendor mark for the legacy Axapta application"
+  },
+  {
+    "application": "BI-инструменты",
+    "asset": "bi-generic.svg",
+    "source": "Original generic chart symbol; no specific BI product claimed"
+  }
+]

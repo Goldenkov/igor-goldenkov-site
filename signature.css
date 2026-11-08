@@ -1,0 +1,321 @@
+/* Signature pass: hero proof and closing contact composition. */
+.hero .hero-proof .proof-first{
+  position:relative;
+  border:1px solid #ff817b80!important;
+  background:radial-gradient(ellipse at 0 0,#ff8a7150,transparent 65%),linear-gradient(145deg,#ff443b,#ed202d 78%);
+  box-shadow:inset 0 1px 0 #ffffff30,0 24px 60px -35px #e5213860;
+  gap:22px;
+}
+.hero .hero-proof .proof-first p{max-width:190px;line-height:1.35;color:#fff5f4}
+.hero .hero-proof .proof-first .proof-number{color:#f4f8ff;letter-spacing:-.07em}
+.hero .hero-description-detail{max-width:36ch;text-wrap:pretty}
+#contact{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 15% 90%,#24425d70,transparent 65%),#101e2d}
+#contact>.wrap{padding-block:clamp(64px,9vw,128px);align-items:center;gap:32px clamp(32px,6vw,96px)}
+#contact>.wrap>.eyebrow{font:700 12px/1.4 Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#baff5b}
+#contact #contact-title{font-size:clamp(32px,4.5vw,64px);line-height:1.15;letter-spacing:-.05em;max-width:16ch;text-wrap:balance}
+#contact .contact-links{width:100%;gap:0;padding:0;font:600 clamp(18px,2vw,25px)/1.4 Manrope,sans-serif}
+#contact .contact-links a{position:relative;display:block;width:100%;padding:22px 36px 22px 0;border-bottom:1px solid #abc2d638;color:#f0f5fc;text-decoration:none;transition:color .25s,border-color .25s}
+#contact .contact-links a::after{content:'↗';position:absolute;right:0;top:50%;bottom:auto;width:auto;height:auto;background:none;transform:translateY(-50%);font:400 27px/1 Manrope,sans-serif;color:#baff5b;transition:transform .25s}
+#contact .contact-links a:is(:hover,:focus-visible){color:#baff5b;border-color:#baff5b}
+#contact .contact-links a:is(:hover,:focus-visible)::after{transform:translate(3px,calc(-50% - 3px))}
+#contact .contact-links a:focus-visible{outline:2px solid #baff5b;outline-offset:6px}
+@media(max-width:720px){
+ #contact>.wrap{grid-template-columns:1fr;padding-block:56px;gap:24px}
+ #contact #contact-title{font-size:clamp(30px,7.5vw,44px);max-width:18ch}
+ #contact .contact-links{font-size:clamp(17px,4.5vw,22px)}
+ #contact .contact-links a{padding-block:20px}
+}
+@media(prefers-reduced-motion:reduce){#contact .contact-links a,#contact .contact-links a::after{transition:none}}
+
+/* Soft square card, matching the existing Google-inspired surfaces. */
+.hero .hero-proof .proof-first{border-radius:28px;overflow:hidden}
+
+/* Isolate underline and action glyph so legacy underline rules cannot move the arrow. */
+#contact .contact-links a{border-bottom:0}
+#contact .contact-links a::before{content:'';position:absolute;left:0;right:0;top:auto;bottom:0;height:1px;background:#baff5b80;pointer-events:none;transition:background .25s}
+#contact .contact-links a::after{left:auto;right:0;width:24px;text-align:center;transform-origin:center}
+#contact .contact-links a:is(:hover,:focus-visible)::before{background:#baff5b}
+.project-drum .drum-arrow{display:grid;place-items:center;background:#e8edf2;border:0;color:#253545;box-shadow:none;transition:background .2s,transform .2s}
+.project-drum .drum-arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.project-drum .drum-arrow:hover:not(:disabled){background:#fff;color:#122638;transform:scale(1.06)}
+.project-drum .drum-arrow:active:not(:disabled){transform:scale(.96)}
+.project-drum .drum-arrow:disabled{opacity:.3}
+@media(prefers-reduced-motion:reduce){.project-drum .drum-arrow,#contact .contact-links a::before{transition:none}}
+
+/* Three original-image layers, anchored beside the cable reel. */
+.career-bee{position:absolute;left:110px;top:-46px;width:142px;height:148px;pointer-events:none;z-index:4}
+.bee-flight{position:relative;width:100%;height:100%;animation:bee-hover 3.4s ease-in-out infinite;animation-play-state:paused;filter:drop-shadow(0 9px 8px #081b2830)}
+.career-bee img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;user-select:none}
+.bee-body{z-index:2}
+.bee-wing{z-index:1;backface-visibility:visible;will-change:transform;animation-duration:.13s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;animation-play-state:paused}
+.bee-wing-left{transform-origin:40.7% 62.9%;animation-name:bee-left-flap}
+.bee-wing-right{transform-origin:58.7% 62.9%;animation-name:bee-right-flap;animation-delay:-.04s}
+.bee-visible:not(.bee-page-hidden) .bee-flight,.bee-visible:not(.bee-page-hidden) .bee-wing{animation-play-state:running}
+@keyframes bee-left-flap{from{transform:perspective(500px) rotateY(-55deg) rotate(-7deg)}to{transform:perspective(500px) rotateY(12deg) rotate(5deg)}}
+@keyframes bee-right-flap{from{transform:perspective(500px) rotateY(55deg) rotate(7deg)}to{transform:perspective(500px) rotateY(-12deg) rotate(-5deg)}}
+@keyframes bee-hover{0%,100%{transform:translate3d(0,0,0) rotate(-2deg)}50%{transform:translate3d(4px,-7px,0) rotate(2deg)}}
+@media(min-width:721px) and (max-width:1000px){.career-bee{left:106px;top:-32px;width:116px;height:121px}}
+@media(prefers-reduced-motion:reduce){.bee-flight,.bee-wing{animation:none;will-change:auto}}
+@media print{.career-bee{display:none}}
+/* Viewport traveller: independent of pinned scenes and cable cleanup. */
+.career-bee.bee-traveller{position:fixed;left:0;top:0;z-index:30;pointer-events:none;will-change:transform}
+@media(max-width:720px){.career-bee.bee-traveller{display:block}}
+
+/* Compact tool ribbon: intrinsic category widths, one unbroken icon row. */
+.tools-scene{width:min(1300px,calc(100vw - 64px));margin-inline:calc((100% - min(1300px,100vw - 64px))/2);padding-block:12px;position:relative}
+.tools-scene>.tools-heading{width:100%;max-width:none;margin:0 auto 10px!important}
+.tools-scene #tools-title{max-width:none;text-align:center;text-wrap:balance}
+.tools-scene .work-tools,.tools-scene .work-tools.tools-swiper{width:100%;max-width:none;min-width:0;margin:0;box-sizing:border-box}
+.work-tools .app-dock{width:max-content;max-width:none;flex-wrap:nowrap}
+.tools-swiper .work-apps{width:max-content;display:flex;gap:28px;align-items:stretch}
+.work-tools.tools-swiper .dock-group{display:grid;grid-template-columns:1fr;align-content:start;gap:0;flex:0 0 auto;width:max-content;padding:8px 0;min-height:0}
+.work-tools.tools-swiper .dock-group h3{left:0;position:static;margin:0!important;font-size:clamp(18px,1.6vw,24px)!important;line-height:1.3!important}
+.work-tools.tools-swiper .dock-viewport{width:auto;max-width:none;min-height:0;overflow:visible;padding:66px 36px 16px;margin:0}
+.work-tools.tools-swiper .app-dock{min-height:0;padding:12px 20px 10px;margin-inline:auto;justify-content:center;gap:12px}
+.work-tools.tools-swiper .dock-item{flex:0 0 72px;width:72px}
+@media(max-width:720px){
+ .tools-scene{width:100%;margin-inline:0}
+ .tools-swiper .work-apps{gap:18px}
+ .work-tools.tools-swiper .dock-viewport{padding:38px 22px 12px}
+ .work-tools.tools-swiper .dock-item{flex-basis:64px;width:64px}
+}
+@media print{
+ .tools-scene{width:100%;margin-inline:0}
+ .work-tools,.work-tools.tools-swiper{width:100%;margin-inline:0}
+ .work-tools.tools-swiper .work-apps{display:block;width:100%}
+ .work-tools.tools-swiper .dock-group{width:100%}
+ .work-tools.tools-swiper .dock-viewport{padding:12px 0}
+ .work-tools .app-dock{width:auto;max-width:100%;flex-wrap:wrap}
+}
+
+/* Compact bilingual navigation; shared motion and page structure. */
+.topbar{gap:16px}
+.language-switch{display:inline-flex;align-items:center;gap:3px;padding:4px;border:1px solid #ffffff24;border-radius:30px;flex-shrink:0;background:#ffffff0a}
+.language-switch a{display:grid;place-items:center;min-width:38px;min-height:32px;padding:4px 9px;border-radius:22px;font:700 12px/1 Manrope,sans-serif;letter-spacing:.04em;color:inherit;text-decoration:none;transition:background .2s,color .2s}
+.language-switch a[aria-current="true"]{background:#baff5b;color:#152535}
+.language-switch a:focus-visible{outline:2px solid #baff5b;outline-offset:3px}
+html[lang="en"] .hero h1{font-size:clamp(38px,5vw,68px)}
+html[lang="en"] .proof-first p{max-width:190px}
+html[lang="en"] .learning-brush-title{font-size:clamp(22px,3vw,34px)}
+html[lang="en"] .education-entry h3{text-wrap:balance;font-size:clamp(18px,2.1vw,26px)}
+@media(max-width:720px){.topbar{flex-wrap:nowrap;gap:10px}.topbar nav{gap:14px}.language-switch a{min-width:32px;padding-inline:6px}.language-switch{margin-left:auto}html[lang="en"] .hero h1{font-size:clamp(32px,7vw,49px)}}
+
+/* Language control belongs to the hero and scrolls away with it. */
+ .hero>.language-switch{position:absolute;top:16px;right:max(16px,env(safe-area-inset-right));z-index:8;margin:0;background:#162b42ed;color:#f5f8fc;border:1px solid #ffffff24;box-shadow:0 6px 20px #07142020;backdrop-filter:blur(12px)}
+@media(max-width:540px){ .hero>.language-switch{top:78px;right:12px;padding:3px} .hero>.language-switch a{min-width:30px;min-height:28px;font-size:11px}}
+@media print{ .hero>.language-switch{display:none}}
+
+.hero{position:relative}
+
+/* Consistent, restrained easing for the small interactive controls. */
+@media(prefers-reduced-motion:no-preference){
+ .language-switch a,.project-drum .drum-arrow,#contact .contact-links a,#contact .contact-links a::before,#contact .contact-links a::after{transition-timing-function:cubic-bezier(.22,.61,.36,1)}
+}
+
+/* Each proof scene uses the same center axis as its diagram. */
+#experience .job-cases .job-case>h3,
+#experience .job-cases .job-case>.big-result,
+#experience .job-cases .oem-case>.case-company{width:100%;max-width:none;align-self:stretch;text-align:center;margin-inline:auto}
+#experience .job-cases .job-case>.big-result small{display:block;width:100%;text-align:center}
+
+/* A closing signature, continuous with the contact section. */
+.footer{display:block;width:100%;padding:14px 0 16px;background:#101e2d;border-top:1px solid #abc2d624;color:#f0f5fc}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.footer-identity{display:grid;gap:4px;min-width:0}
+.footer-name{font:600 clamp(20px,1.8vw,25px)/1.3 var(--display,Manrope,sans-serif);letter-spacing:-.045em}
+.footer-role{font:500 13px/1.5 Manrope,sans-serif;color:#a8bccf}
+.footer-top{display:inline-flex;align-items:center;gap:10px;flex:none;padding:4px 4px 4px 14px;border:1px solid #abc2d63d;border-radius:60px;font:600 13px/1.3 Manrope,sans-serif;color:#edf5fc;transition:background .25s,border-color .25s,transform .25s}
+.footer-top svg{width:34px;height:34px;flex:none;padding:9px;border-radius:50%;background:#baff5b;fill:none;stroke:#142d22;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-top:is(:hover,:focus-visible){background:#ffffff0a;border-color:#baff5b;transform:translateY(-2px)}
+.footer-top:focus-visible{outline:2px solid #baff5b;outline-offset:5px}
+@media(max-width:720px){.footer{padding:14px 0}.footer-inner{gap:16px}.footer-name{font-size:20px}.footer-role{font-size:12px}.footer-top{max-width:140px;padding-left:12px;gap:8px}}
+@media(max-width:480px){.footer-inner{flex-wrap:wrap;gap:12px}.footer-name{font-size:18px}.footer-top{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){.footer-top{transition:none}.footer-top:is(:hover,:focus-visible){transform:none}}
+@media print{.footer{display:none}}
+
+/* Projects caption belongs to the carousel, centered above its cards. */
+#digital .project-drum>.project-drum-heading{display:block;width:100%;margin:10px 0 0;padding:8px 24px 0;text-align:center;color:#baff5b;font:700 14px/1.5 Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+@media print{#digital .project-drum>.project-drum-heading{color:#111;padding:0;margin:16px 0 12px}}
+
+/* Inline brand artwork preserves the paragraph's natural text flow. */
+#experience .job-brand-logos{display:inline}
+#experience .job-brand-logo{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;width:clamp(94px,8vw,124px);height:38px;margin:3px 6px 3px 0;padding:8px;background:linear-gradient(140deg,#23405c,#152c42);border-radius:9px;box-shadow:inset 0 0 0 1px #789abc40}
+#experience .job-brand-logo img{display:block;width:100%;height:22px;object-fit:contain;filter:none;transform:none}
+#experience .job-brand-description{margin-top:0}
+#digital .digital-research-subject{white-space:nowrap;font-size:clamp(14px,1.8vw,24px);letter-spacing:-.025em}
+@media(max-width:480px){#digital .digital-research-subject{font-size:clamp(16px,5.1vw,22px)}}
+@media print{#experience .job-brand-logo{box-shadow:none;border:1px solid #ddd;background:white}#experience .job-brand-logo img{filter:brightness(0)}#digital .digital-research-subject{white-space:normal;color:black}}
+
+/* A centered text-width accent and the SEVERCON brand family. */
+#digital .project-drum-heading>span{display:inline-block;max-width:100%;vertical-align:top}
+#digital .project-drum-heading>span::after{content:'';display:block;width:100%;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,#90e637,#c9ff7a 50%,#90e637);box-shadow:0 0 14px #baff5b28}
+#experience .severcon-brand-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:2px 0 14px}
+#experience .severcon-brand-logos .job-brand-logo{width:100%;height:56px;margin:0;padding:10px;background:#f8fafc;box-shadow:inset 0 0 0 1px #cfdae6}
+#experience .severcon-brand-logos img{height:30px}
+@media(max-width:480px){#experience .severcon-brand-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}}
+@media print{#digital .project-drum-heading>span::after{background:#333;box-shadow:none}}
+
+/* Company scope precedes the name; brand descriptions begin on their own line. */
+#experience .job .detail-heading>.job-sector{grid-column:1;display:block;color:#41546a;font:600 clamp(14px,1.15vw,16px)/1.45 Manrope,sans-serif;letter-spacing:0;max-width:100%;text-wrap:pretty}
+#experience .job-brand-description>.job-brand-logos{display:block;margin-bottom:8px}
+#tools-title .tools-work,#tools-title .accent-word .word-motion,
+#education-title .education-accent,#education-title .accent-word .word-motion{color:var(--word-lime,#80ed08)!important;text-shadow:0 1px 0 #31531924,0 0 10px #80ed0820}
+
+/* Fit the SEVERCON summary to its column, keeping normal wrapping on phones. */
+@media(min-width:768px){
+  #experience .severcon-proof{container-type:inline-size}
+  #experience .severcon-proof .job-proof-scope{font-size:12px;font-size:min(14px,calc((100cqw - 17px)/40));white-space:nowrap;line-height:1.6}
+}
+
+/* Name, role and direct contacts form one business card beside the closing headline. */
+#contact .contact-card{min-width:0;width:100%;margin:0;padding:clamp(22px,2.4vw,34px);font-style:normal;border:1px solid #abc2d630;border-radius:28px;background:linear-gradient(135deg,#26415a8c,#152c4270);box-shadow:0 18px 45px #07132018}
+#contact .contact-identity{display:grid;gap:10px;padding-bottom:20px}
+#contact .contact-name{font:600 clamp(22px,2.1vw,30px)/1.25 var(--display,Manrope,sans-serif);letter-spacing:-.04em;color:#f0f5fc;overflow-wrap:anywhere}
+#contact .contact-role{font:500 clamp(13px,1.1vw,15px)/1.55 Manrope,sans-serif;color:#b6cadd;max-width:32ch}
+#contact .contact-card .contact-links{font-size:clamp(17px,1.65vw,23px)}
+.footer .footer-inner{justify-content:flex-end}
+@media(max-width:720px){#contact .contact-card{padding:24px;border-radius:24px}#contact .contact-identity{padding-bottom:12px}#contact .contact-name{font-size:clamp(22px,6vw,28px)}}
+@media print{#contact .contact-card{background:none;border-color:#ccc;box-shadow:none;padding:16px}#contact .contact-name,#contact .contact-role{color:#111}}
+
+/* Expose the original transparent brand artwork without a badge surface. */
+#experience .severcon-brand-logos .job-brand-logo{background:transparent;box-shadow:none;border:0;border-radius:0}
+/* The left promise and its corresponding right-hand step share a content-sized row. */
+.aligned-story .partner-promise{display:grid;gap:24px;margin-top:22px}
+.aligned-story .promise-stage{min-width:0}
+.aligned-story .promise-phrase{display:block;padding:4px 7px;border-radius:0;font:800 clamp(24px,2.65vw,33px)/1.18 Manrope,sans-serif;letter-spacing:-.04em;color:#173d60;transition:color .3s}
+.aligned-story .promise-phrase.promise-lit{color:#153a29;--brush-opacity:1}
+.aligned-story .promise-stage .story-proof{margin:18px 0 0;padding:12px 0 12px 16px;max-width:none;font:500 15px/1.65 Manrope,sans-serif;color:#234960;background:none}
+.aligned-story .promise-stage .compact-proof{margin-top:12px;padding:8px 0 8px 12px;font-size:13px;line-height:1.55}
+@media(min-width:721px){
+  .skills-grid>.aligned-story{grid-template-rows:auto auto auto auto;row-gap:24px}
+  .aligned-story .story-heading{grid-column:1;grid-row:1/5;display:grid;grid-template-rows:subgrid;row-gap:24px}
+  .aligned-story .story-heading h3{grid-row:1;align-self:start}
+  .aligned-story .partner-promise{display:contents!important}
+  .aligned-story .promise-stage[data-step="0"]{grid-row:2}
+  .aligned-story .promise-stage[data-step="1"]{grid-row:3}
+  .aligned-story .promise-stage[data-step="2"]{grid-row:4}
+  .aligned-story .story-steps{grid-column:2;grid-row:2/5;grid-template-rows:subgrid;row-gap:24px;align-self:stretch}
+  .aligned-story .story-steps li:nth-of-type(1){grid-row:1}
+  .aligned-story .story-steps li:nth-of-type(2){grid-row:2}
+  .aligned-story .story-steps li:nth-of-type(3){grid-row:3}
+}
+/* A quiet, centered return control on the white closing surface. */
+.footer{background:#fff;border-top:1px solid #e5e5ea;color:#1d1d1f;padding:20px 0}
+.footer .footer-inner{justify-content:center}
+#contact .contact-top{display:inline-flex;align-items:center;flex:none;margin:0;max-width:none;min-height:44px;padding:12px 18px;gap:10px;border:1px solid #dedee3;border-radius:999px;background:#f5f5f7;color:#1d1d1f;font:600 14px/1.3 Manrope,sans-serif;box-shadow:0 2px 8px #1d1d1f08;transition:background .25s,border-color .25s,box-shadow .25s,transform .25s}
+#contact .contact-top svg{fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none;width:20px;height:20px;padding:0;border-radius:0;background:none;stroke:currentColor;stroke-width:1.8}
+#contact .contact-top:is(:hover,:focus-visible){background:#e8e8ed;border-color:#c8c8cf;color:#1d1d1f;box-shadow:0 4px 12px #1d1d1f0d;transform:translateY(-1px)}
+#contact .contact-top:focus-visible{outline:2px solid #0071e3;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.aligned-story .promise-phrase,#contact .contact-top{transition:none}#contact .contact-top:is(:hover,:focus-visible){transform:none}}
+
+/* A shared broad brush: the existing scroll state controls only its opacity. */
+.aligned-story .promise-phrase,
+.tool-heading-text,
+.learning-brush-title>span{position:relative;isolation:isolate;background:none;box-shadow:none}
+.aligned-story .promise-phrase::before,
+.tool-heading-text::before,
+.learning-brush-title>span::before{
+  content:"";position:absolute;inset:0 -3px;z-index:-1;pointer-events:none;
+  background:#baff5b;
+  -webkit-mask:url("assets/lime-brush-mask.svg") center/100% 100% no-repeat;
+  mask:url("assets/lime-brush-mask.svg") center/100% 100% no-repeat;
+  transform:rotate(-.6deg);opacity:var(--brush-opacity,1);
+}
+.aligned-story .promise-phrase{--brush-opacity:0;background:none}
+.aligned-story .promise-phrase::before{transition:opacity .3s}
+.aligned-story .promise-phrase.promise-lit{--brush-opacity:1}
+.tool-heading-text{border-radius:0}
+.learning-brush-title>span{display:inline-block;max-width:100%;box-sizing:border-box}
+.plan-months i{border-radius:6px}
+@media(prefers-reduced-motion:reduce){.aligned-story .promise-phrase::before{transition:none}}
+
+/* Compact closing card: one padded surface, with the return action inside it. */
+#contact{padding-block:0}
+#contact>.wrap{padding-block:clamp(28px,3.2vw,44px);row-gap:20px}
+#contact .contact-card{padding:clamp(20px,2.2vw,28px)}
+#contact .contact-identity{gap:8px;padding-bottom:12px}
+#contact .contact-links a{padding-block:16px}
+#contact .contact-return{grid-column:1/-1;display:flex;justify-content:center;padding-top:4px}
+@media(max-width:720px){
+  #contact>.wrap{padding-block:28px;row-gap:20px}
+  #contact .contact-links a{padding-block:14px}
+}
+@media print{#contact .contact-return{display:none}}
+
+/* Company evidence uses the same compact note treatment as the former story proof. */
+#experience .job .job-content .job-context-proof{
+  margin:8px 0;padding:8px 0 8px 12px;max-width:none;
+  border-left:3px solid #90d33f;background:none;
+  font:500 13px/1.55 Manrope,sans-serif;letter-spacing:0;color:#234960;text-align:left;
+}
+
+/* The role stays on one line and fits the business card's available width. */
+#contact .contact-card{container-type:inline-size}
+#contact .contact-role{max-width:none;white-space:nowrap;font-size:12px;font-size:clamp(9px,4.2cqi,15px)}
+@media print{#contact .contact-role{white-space:normal;font-size:11px}}
+
+/* Compact the career column through spacing; all copy and diagrams stay visible. */
+#experience .timeline>.job{padding-block:16px}
+#experience .timeline>.job+.job{margin-top:20px!important;padding-top:20px!important}
+#experience .job .detail-heading{row-gap:6px}
+#experience .job .job-title small{margin-top:6px}
+#experience .job .job-content{padding-top:16px}
+#experience .job .job-content>p{margin-block:8px}
+#experience .job .job-metrics{padding-block:12px;margin-bottom:10px}
+#experience .job .job-proof{margin-block:12px;padding-block:14px}
+#experience .job .job-proof-metrics{margin-bottom:12px;gap:16px}
+#experience .job .job-proof-metrics>div{gap:6px}
+#experience .job .job-proof h4{margin-bottom:12px}
+#experience .job .job-distribution.case{row-gap:12px;margin-top:12px;padding-top:16px}
+#experience .job .distribution-work{padding-top:12px}
+#experience .job .job-networks{margin-top:12px;padding-top:12px}
+#experience .job .networks-chart{padding:16px;margin-bottom:12px}
+#experience .job .job-contract{padding-top:16px;margin-top:16px}
+#experience .job .job-contract h4{margin-bottom:14px}
+#experience .job .contract-path{margin-bottom:16px}
+#experience .job .contract-path li{padding-block:14px;min-height:68px}
+#experience #cases.job-cases{gap:12px}
+#experience .job-cases .oem-role.oem-path{row-gap:16px}
+
+/* Thirteen equal squares keep their proportions at every career-column width. */
+.plan-months{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:clamp(3px,1vw,6px);height:auto;align-items:start}
+.plan-months i{display:block;min-width:0;aspect-ratio:1;flex:none;border-radius:clamp(2px,.8vw,6px)}
+
+/* Native touch swipes, with custom dragging reserved for the mouse. */
+.project-drum .project-grid{touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
+.project-drum .project-grid.dragging{scroll-snap-type:none;scroll-behavior:auto;user-select:none}
+
+/* The narrow-screen timeline has its own endpoint; desktop keeps its continuous cable. */
+.timeline-cable-tip{display:none;position:absolute;top:100%;left:1px;width:14px;height:18px;transform:translate(-50%,-2px);background:url('assets/cable-tip.webp') center/contain no-repeat;pointer-events:none;z-index:1}
+@media(max-width:720px){
+  .timeline-cable-tip{display:block}
+  .hero-bottom .sales-journey li{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0;gap:8px}
+  .hero-bottom .sales-journey .journey-index{margin:0}
+  .hero-bottom .sales-journey strong{width:100%;text-wrap:balance}
+}
+@media print{.timeline-cable-tip{display:none}}
+
+/* Reveal the braid by length, so its pattern does not squash or crawl on touch scroll. */
+.timeline-fill,.story-rail-fill{bottom:auto;height:100%;transform:none!important}
+.story-cable-tip{display:none;position:absolute;top:100%;left:-1px;width:14px;height:18px;transform:translate(-50%,-2px);background:url('assets/cable-tip.webp') center/contain no-repeat;pointer-events:none;z-index:1}
+.learning-heading-parts{display:flex;flex-direction:column;align-items:center}
+.learning-heading-line{display:block;max-width:100%}
+@media(max-width:720px){
+  .story-cable-tip{display:block}
+  /* Inline whitespace and a real margin work even on Safari without flex gap. */
+  .learning-heading-parts{display:block}
+  .learning-heading-line{display:inline}
+  .learning-heading-line+.learning-heading-line{margin-left:.12em;white-space:nowrap}
+  /* Never display an entire moving cable before its native controller starts. */
+  .timeline-fill,.story-rail-fill{height:0}
+  .timeline-cable-tip,.story-cable-tip{top:0;opacity:0}
+  .story-steps{border-left-color:transparent}
+  .timeline::before{opacity:0}
+  #experience .job-brand-description>.lighting-brand-logos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(4px,1.3vw,8px);row-gap:8px;margin:0 0 12px}
+  #experience .lighting-brand-logos .job-brand-logo{width:100%;min-width:0;height:38px;margin:0;padding:8px}
+  #experience .lighting-brand-logos .job-brand-logo:nth-child(1){grid-column:3/span 4;grid-row:1}
+  #experience .lighting-brand-logos .job-brand-logo:nth-child(3){grid-column:7/span 4;grid-row:1}
+  #experience .lighting-brand-logos .job-brand-logo:nth-child(4){grid-column:1/span 4;grid-row:2}
+  #experience .lighting-brand-logos .job-brand-logo:nth-child(2){grid-column:9/span 4;grid-row:2}
+}
+@media print{.story-cable-tip{display:none}.timeline-fill,.story-rail-fill{height:100%!important}}
